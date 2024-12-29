@@ -1,0 +1,87 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+  overflow-y: hidden;
+}
+
+.modalContent {
+  background: white;
+  border-radius: 10px;
+  max-width: 800px;
+  max-height: 80vh;
+  padding: 2rem;
+  position: relative;
+  overflow: auto;
+  animation: expand 0.2s ease-out forwards;
+  overflow-y: hidden;
+}
+
+.flagImage {
+  max-width: 100%;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.countryDetailsGrid {
+  margin: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(3, minmax(0px, auto));
+  gap: 10px;
+}
+
+.countryDetailsGrid p {
+  margin: 0;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.compareButton {
+  display: block;
+  margin: 20px auto;
+  padding-top: 20px;
+  width: 60%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #34495e;
+  color: white;
+  cursor: pointer;
+}
+
+@keyframes expand {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+:global(.dark-mode) .compareButton {
+  background-color: #1a1a1a;
+  color: rgb(255, 255, 255);
+}
+
+:global(.dark-mode) .modalContent {
+  background: rgb(48, 48, 48);
+}

@@ -1,0 +1,138 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #293847;
+  padding: 20px;
+  color: white;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden
+}
+
+.sidebar h2 {
+  margin-bottom: 50px;
+  font-size: 32px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.loginForm input {
+  width: 92%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #34495e;
+  color: white;
+  margin-bottom: 6px;
+}
+
+.filterGroup {
+  margin-bottom: 20px;
+}
+
+.filterGroup label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.filterGroup input {
+  width: 92%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #34495e;
+  color: white;
+}
+
+.filterGroup select {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #34495e;
+  color: white;
+}
+
+.faveFilter {
+  width: 92%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #34495e;
+  color: white;
+
+}
+
+.faveFilter label {
+  margin-right: 10px;
+}
+
+.faveFilter .checkbox {
+  margin-left: auto;
+}
+
+.filterGroup input::placeholder {
+  color: #bdc3c7;
+}
+
+.sidebar input:focus,
+.sidebar select:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(236, 240, 241, 0.5);
+}
+
+.sidebar button {
+  width: 100%;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #34495e;
+  color: white;
+  margin-top: auto;
+  margin-bottom: 50px;
+}
+
+.sidebar button:hover {
+  background-color: #3a5269;
+}
+
+:global(.dark-mode) .sidebar {
+  background-color: #1f1d1d;
+  color: #f5f5f5;
+}
+
+:global(.dark-mode) .sidebar h2 {
+  color: #ffffff;
+}
+
+
+:global(.dark-mode) .loginForm input,
+:global(.dark-mode) .filterGroup input,
+:global(.dark-mode) .filterGroup select,
+:global(.dark-mode) .faveFilter {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+}
+
+:global(.dark-mode).sidebar button {
+  width: 100%;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3f3f3f;
+  color: white;
+  margin-top: auto;
+  margin-bottom: 50px;
+}
+
+:global(.dark-mode) .sidebar button:hover {
+  background-color: #4a4a4a;
+}

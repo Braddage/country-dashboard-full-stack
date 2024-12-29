@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+}
+
+.countryGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin-left: 270px;
+    width: calc(100% - 270px);
+    overflow: auto;
+}
+
+@media (max-width: 768px) {
+    .countryGrid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
